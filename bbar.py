@@ -103,8 +103,9 @@ class BatteryBar:
 		try:
 			self.battery_level = self.battery.Get(UPOWER_BUSNAME, 'Percentage', dbus_interface=dbus.PROPERTIES_IFACE)/100
 			self.battery_state = self.battery.Get(UPOWER_BUSNAME, 'State', dbus_interface=dbus.PROPERTIES_IFACE)
-		except:
-			pass
+			print "Battery: " + str(self.battery_level) + " " + str(self.battery_state)
+		except Exception as e:
+			print e
 		self.update()
 
 	def compute_color(self):
