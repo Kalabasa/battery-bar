@@ -20,3 +20,5 @@ Then execute
 ```
 ./bbar.py
 ```
+
+Use `bbar-timed.py` for a version that uses polling instead of listening to dbus notifications.
